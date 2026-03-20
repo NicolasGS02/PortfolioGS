@@ -1,3 +1,6 @@
+/* =========================
+   CURSOR
+========================= */
 html {
   cursor: url('https://cdn.custom-cursor.com/db/4828/32/arrow2747.png'), default !important;
 }
@@ -6,14 +9,13 @@ a, button, .clickable {
   cursor: url('https://cdn.custom-cursor.com/db/4827/32/arrow2747.png'), pointer !important;
 }
 
-
 /* =========================
-   VARIABLES (opcional pero útil)
+   VARIABLES
 ========================= */
 :root {
   --bg-main: #191A29;
-  --glass-bg: rgba(31, 33, 58, 0.8);
-  --box-bg: rgba(30, 32, 60, 0.9);
+  --glass-bg: rgba(31, 33, 58, 0.75);
+  --box-bg: rgba(30, 32, 60, 0.85);
   --primary: #b586ff;
   --secondary: #fabd00;
 }
@@ -26,46 +28,78 @@ body {
 }
 
 /* =========================
-   NAVBAR (solo lo especial)
+   NAVBAR (GLASS + BORDES)
 ========================= */
-.custom-nav {
-  backdrop-filter: blur(10px);
-  background: var(--glass-bg);
+.navbar {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 /* =========================
-   HERO CARD (glass effect)
+   HERO CARD
 ========================= */
 .hero-card {
-  background-color: #4b0f1f;
+  background: linear-gradient(135deg, #0b0f2a, #1a1f4a);
   position: relative;
   z-index: 1;
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
 }
 
+/* =========================
+   FLOATING BOXES
+========================= */
 .floating-box {
   position: absolute;
   z-index: 2;
-  background-color: rgba(20, 20, 40, 0.9);
+  background: var(--box-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
 }
 
-/* Posiciones */
+.floating-box:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* POSICIONES DESKTOP */
 .box-1 {
-  top: -20px;
-  left: -60px;
+  top: 20px;
+  left: -40px;
 }
 
 .box-2 {
-  bottom: -20px;
-  right: -60px;
+  bottom: 20px;
+  right: -40px;
 }
 
+/* =========================
+   RESPONSIVE (MÓVIL)
+========================= */
+@media (max-width: 991px) {
+  .floating-box {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .box-1, .box-2 {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
 
 /* =========================
-   MAPA
+   MAPA (PAÍSES)
 ========================= */
 .country-card {
   background: rgba(20, 20, 40, 0.6);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.05);
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -77,5 +111,5 @@ body {
 
 .country-card:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(181, 134, 255, 0.4);
 }
