@@ -36,6 +36,7 @@ a, button, .clickable {
   background: var(--glass-bg) !important;
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.08);
+  
 }
 
 /* =========================
@@ -144,12 +145,13 @@ a, button, .clickable {
   backdrop-filter: blur(10px);
 }
 
+.nav-link {
+  color: whitesmoke;
+}
+
 #voyagerNav .nav-link.active {
   background-color: var(--secondary) !important;
   color: #000 !important;
   box-shadow: 0 0 15px rgba(250, 189, 0, 0.4);
   border-radius: 5px;
-}
-id {
-scroll-margin-top: 20px;
 }
