@@ -155,3 +155,10 @@ a, button, .clickable {
   box-shadow: 0 0 15px rgba(250, 189, 0, 0.4);
   border-radius: 5px;
 }
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
